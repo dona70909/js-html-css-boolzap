@@ -12,6 +12,9 @@
     <!-- * bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     
+    <!-- * vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+
     <!-- * font awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" >
     <title>Boolzap</title>
@@ -21,7 +24,7 @@
     
     
     
-    <main>
+    <main id="app">
         <section class="position-relative">
 
             <!-- top green bg -->
@@ -41,9 +44,9 @@
                             <div class="my-contact-wrapper my-selected-contact-wrapper selected-gray d-flex justify-content-between px-2 py-3">
                                 <div class="my-contact-left d-flex">
                                     <div class="my-pic-bg me-2">
-                                        <img src="#" alt="foto">
+                                        <img src="img/avatar_io.jpg" alt="foto">
                                     </div>
-                                    <h5>name</h5>
+                                    <h5 class="contact-name">Sofia</h5>
                                 </div>
                                 
                                 <div class="my-contact-right">
@@ -72,44 +75,16 @@
                             
                             <!-- list contact/chat -->
                             <div class="container-list-contacts overflow-auto">
-                                <ul class=" list-unstyled">
-                                    <li class="selected-gray">
+                                <ul class="list-unstyled">
+                                    <li @click="" v-for="(contact,index) in contacts" class="selected-gray">
                                         <div class="my-contact-wrapper d-flex justify-content-between">
                                             <div class="my-contact-left d-flex">
                                                 <div class="my-pic-bg me-2">
-                                                    <img src="#" alt="foto">
+                                                    <img :src="'img/' + contact.image" alt="foto">
                                                 </div>
                                                 <div class="my-contact-text">
-                                                    <h6 class="fw-bolder m-0">name</h6>
-                                                    <p class="m-0">ciao</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <div class="my-contact-wrapper d-flex justify-content-between ">
-                                            <div class="my-contact-left d-flex">
-                                                <div class="my-pic-bg me-2">
-                                                    <img src="#" alt="foto">
-                                                </div>
-                                                <div class="my-contact-text">
-                                                    <h6 class="fw-bolder m-0">name</h6>
-                                                    <p class="m-0">ciao</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <div class="my-contact-wrapper d-flex justify-content-between ">
-                                            <div class="my-contact-left d-flex">
-                                                <div class="my-pic-bg me-2">
-                                                    <img src="#" alt="foto">
-                                                </div>
-                                                <div class="my-contact-text">
-                                                    <h6 class="fw-bolder m-0">name</h6>
-                                                    <p class="m-0">ciao</p>
+                                                    <h6 class="fw-bolder m-0">{{contact.name}}</h6>
+                                                    <p class="m-0">Ultimo messaggio inviato</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -137,16 +112,16 @@
                                 </div>
                             </div>
 
-                            <div class="my-box-chat  overflow-auto">
-                                <div class="my-msg-right-container clearfix">
-                                    <div class="my-msg-right float-end  msg-box-style">
-                                        asd
+                            <div class="my-box-chat overflow-auto">
+                                <div  class="my-msg-right-container clearfix">
+                                    <div class="my-msg-right float-end msg-box-style d-flex flex-column">
+                                        ciao
                                     </div>
                                 </div>
 
                                 <div class="my-answer-msg-left-container ">
                                     <div class="my-answer-msg-left msg-box-style">
-                                        kan
+                                        ciao
                                     </div>
                                 </div>
                             </div>
@@ -165,6 +140,6 @@
     
     
     <!--javascript-->
-    <script type="text/javascript" src="js/myjavascript"></script>
+    <script type="text/javascript" src="js/myscript.js"></script>
 </body>
 </html>

@@ -196,6 +196,7 @@ const app = new Vue ({
         ],
 
         activeClick:null,
+        inputMessage:"",
         
     
     }, 
@@ -203,8 +204,7 @@ const app = new Vue ({
     methods: {
         getActiveClick(index){
             this.activeClick = index;
-        }
-        
+        },
         
     },
 })

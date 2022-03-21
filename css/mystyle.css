@@ -74,7 +74,6 @@
 }
 
 .my-msg-right{
-    width: 50%;
     background-color: green;
 }
 
@@ -83,6 +82,11 @@
 }
 
 .my-answer-msg-left{
-    width: 50%;
     background-color: rgb(211, 123, 16);
+}
+
+.msg-box-style{
+    width: 40%;
+    padding: .5rem;
+    border-radius: 10px;
 }

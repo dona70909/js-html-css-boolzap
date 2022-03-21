@@ -63,3 +63,26 @@
     background-color: aliceblue;
     cursor: pointer;
 }
+
+
+.my-box-chat{
+    padding: 1rem;
+}
+
+.my-msg-right-container{
+    width: 100%;
+}
+
+.my-msg-right{
+    width: 50%;
+    background-color: green;
+}
+
+.my-answer-msg-left-container{
+    width: 100%;
+}
+
+.my-answer-msg-left{
+    width: 50%;
+    background-color: rgb(211, 123, 16);
+}

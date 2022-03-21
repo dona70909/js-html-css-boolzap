@@ -11,9 +11,8 @@ body{
     top:2rem;
 }
 
-
 .my-main-content-left{
-    background-color: aquamarine;
+    background-color:white;
     border-right: 1px solid lightgray;
 }
 
@@ -23,7 +22,6 @@ body{
 
 .bi{
     cursor: pointer;
-    padding-left: .2rem;
 }
 
 /* # left */
@@ -48,11 +46,15 @@ body{
 .bell-icon-bg{
     width: 2.5rem;
     height: 2.5rem;
-    background-color: azure;
+    background-color: white;
     border-radius: 50%;
     line-height: 2.5rem;
     display: flex;
     justify-content: center;
+}
+
+.selected{
+    background-color: lightskyblue;
 }
 
 .my-search-box-wrapper{
@@ -64,12 +66,18 @@ body{
     border: none;
     width: 100%;
     padding: .5rem .2rem;
+    border: 1px solid lightgrey;
 }
 
 .my-search-box-wrapper > .bi-search{
     padding: .5rem .8rem;
-    background-color: aliceblue;
+    background-color: white;
     cursor: pointer;
+    border: 1px solid lightgrey;
+}
+
+.selected-gray{
+    background-color: #E9EBEB;
 }
 
 
@@ -80,13 +88,13 @@ body{
 /* # right content */
 
 .my-main-content-right{
-    background-image:url("https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg") ;
+    background-image:url("https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg");
 }
 
 /* da modificare */
-.my-contact-wrapper{
+/* .my-contact-wrapper{
     background-color:bisque;
-}
+} */
 
 .my-msg-right-container{
     width: 100%;

@@ -25,13 +25,9 @@ main{
     border-right: 1px solid lightgray;
 }
 
-/* .my-main-content-right{
-    background-color: bisque;
-} */
 
 .bi{
     cursor: pointer;
-
 }
 
 .icon-grey{
@@ -44,7 +40,8 @@ h5{
 li{
     cursor: pointer;
 }
-/* # left */
+
+/* # LEFT */
 
 .my-contact-wrapper{
     border-bottom:1px solid lightgray;
@@ -113,7 +110,7 @@ li{
     padding: 1rem;
 }
 
-/* # right content */
+/* # RIGHT */
 
 .my-main-content-right{
     background-image:url("https://i.pinimg.com/736x/e4/7c/40/e47c40fa64c12a0179320f76ddd67d8d.jpg");

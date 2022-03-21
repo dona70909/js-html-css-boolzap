@@ -46,3 +46,20 @@
     display: flex;
     justify-content: center;
 }
+
+.my-search-box-wrapper{
+    padding: .5rem;
+    border-bottom:1px solid lightgray;
+}
+
+.my-search-bar{
+    border: none;
+    width: 100%;
+    padding: .5rem .2rem;
+}
+
+.bi-search{
+    padding: .5rem .8rem;
+    background-color: aliceblue;
+    cursor: pointer;
+}

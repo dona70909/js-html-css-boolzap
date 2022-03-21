@@ -193,20 +193,35 @@ const app = new Vue ({
 
                 isClicked:false,
             }
-        ]
+        ],
+
+        activeClick:null,
         
     
     }, 
 
     methods: {
 
-        clickedContact(index){
-            
+        /*clickedContact(index){
             if(this.contacts[index].messages != 0){
                 this.contacts[index].isClicked = !this.contacts[index].isClicked;
+                
             }
 
             console.table( this.contacts[index].isClicked);
+        } */
+
+        clickedContact(index,event){
+            this.contacts[index].isClicked = true;
+            event = false;
+
+            console.table( this.contacts[index].isClicked);
+        },
+
+        getActiveClick(index){
+            this.activeClick = index;
         }
+        
+        
     },
 })

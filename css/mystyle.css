@@ -12,13 +12,13 @@ body{
 }
 
 .my-main-content-left{
-    background-color:white;
+    background-color:#ffffff;
     border-right: 1px solid lightgray;
 }
 
-.my-main-content-right{
+/* .my-main-content-right{
     background-color: bisque;
-}
+} */
 
 .bi{
     cursor: pointer;
@@ -46,7 +46,8 @@ body{
 .bell-icon-bg{
     width: 2.5rem;
     height: 2.5rem;
-    background-color: white;
+    background-color: #ffffff;
+    color:rgb(142, 218, 252);
     border-radius: 50%;
     line-height: 2.5rem;
     display: flex;
@@ -54,7 +55,7 @@ body{
 }
 
 .selected{
-    background-color: lightskyblue;
+    background-color:rgb(142, 218, 252);
 }
 
 .my-search-box-wrapper{
@@ -71,15 +72,14 @@ body{
 
 .my-search-box-wrapper > .bi-search{
     padding: .5rem .8rem;
-    background-color: white;
+    background-color: #ffffff;
     cursor: pointer;
     border: 1px solid lightgrey;
 }
 
 .selected-gray{
-    background-color: #E9EBEB;
+    background-color:rgb(234, 234, 234);
 }
-
 
 .my-box-chat{
     padding: 1rem;
@@ -88,20 +88,15 @@ body{
 /* # right content */
 
 .my-main-content-right{
-    background-image:url("https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg");
+    background-image:url("https://i.pinimg.com/736x/e4/7c/40/e47c40fa64c12a0179320f76ddd67d8d.jpg");
 }
-
-/* da modificare */
-/* .my-contact-wrapper{
-    background-color:bisque;
-} */
 
 .my-msg-right-container{
     width: 100%;
 }
 
 .my-msg-right{
-    background-color: green;
+    background-color: rgb(213, 249, 186);
 }
 
 .my-answer-msg-left-container{
@@ -109,7 +104,7 @@ body{
 }
 
 .my-answer-msg-left{
-    background-color: rgb(211, 123, 16);
+    background-color: rgb(255, 255, 255);
 }
 
 .msg-box-style{
@@ -119,7 +114,7 @@ body{
 }
 
 .my-bottom-input-container{
-    background-color:lightgray;
+    background-color:rgb(243, 238, 234);
     padding: .5rem 1.8rem;
 }
 

@@ -69,6 +69,16 @@
     padding: 1rem;
 }
 
+/* # right content */
+
+.my-main-content-right{
+    background-image:url("https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg") ;
+}
+
+.my-contact-wrapper{
+    background-color:bisque;
+}
+
 .my-msg-right-container{
     width: 100%;
 }

@@ -22,7 +22,7 @@ body{
 
 .bi{
     cursor: pointer;
-   
+
 }
 
 .icon-grey{
@@ -59,6 +59,10 @@ body{
     line-height: 2.5rem;
     display: flex;
     justify-content: center;
+}
+
+.text-alert-wrap  > p > a{
+    color:#84817a;
 }
 
 .selected{

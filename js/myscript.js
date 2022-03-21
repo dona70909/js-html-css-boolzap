@@ -197,6 +197,7 @@ const app = new Vue ({
 
         activeClick:null,
         inputMessage:"",
+        isPressed:false,
         
     
     }, 

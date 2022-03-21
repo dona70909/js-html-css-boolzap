@@ -26,3 +26,13 @@
     border-radius: 50%;
     background-color: blueviolet;
 }
+
+.bell-icon-bg{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: azure;
+    border-radius: 50%;
+    line-height: 2.5rem;
+    display: flex;
+    justify-content: center;
+}

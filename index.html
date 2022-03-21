@@ -112,20 +112,34 @@
                                 </div>
                             </div>
 
-                        
 
-                            <div v-if="(index == activeClick)" v-for="(contact,index) in contacts" class="my-box-chat overflow-auto">
-                                <div v-for="(msg,index) in contact.messages" class="my-msg-right-container clearfix mb-1">
-                                    <div class="my-msg-right float-end msg-box-style d-flex flex-column">
+                            
+                            <!-- BOX MESSAGES -->
+                            <div v-if="(index == activeClick)" v-for="(contact,index) in contacts"  class="my-box-chat overflow-auto">
+
+                                <!-- # msg sent -->
+                                <div  v-for="(msg,index) in contact.messages" class="my-msg-right-container clearfix mb-1">
+                                    <div v-if="msg.status == 'sent' " class="my-msg-right float-end msg-box-style d-flex flex-column">
                                         {{msg.message}}
                                     </div>
                                 </div>
 
-                                <div v-if="(inputMessage != '')" class="my-answer-msg-left-container ">
-                                    <div class="my-answer-msg-left msg-box-style">
+                                <!-- % received messages -->
+                                <div v-for="(msg,index) in contact.messages"  class="my-answer-msg-left-container ">
+                                    <div v-if="msg.status == 'received' " class="my-answer-msg-left msg-box-style mb-1">
+                                        {{msg.message}}
+                                    </div>
+                                    
+                                </div>
+
+                                <!-- # input msg --> 
+                                <div class="my-answer-msg-left-container ">
+                                    <div v-if="(inputMessage != '')" class="my-answer-msg-left msg-box-style">
                                         {{inputMessage}}
                                     </div>
+                                    
                                 </div>
+
                             </div>
                             
 

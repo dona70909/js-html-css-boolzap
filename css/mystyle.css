@@ -20,11 +20,21 @@
     background-color: bisque;
 }
 
+.my-contact-wrapper{
+    border-bottom:1px solid lightgray;
+    padding: .5rem;
+}
+
 .my-pic-bg{
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: blueviolet;
+}
+
+.my-message-alert-wrapper{
+    padding: .5rem;
+    border-bottom:1px solid lightgray;
 }
 
 .bell-icon-bg{

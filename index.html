@@ -76,7 +76,7 @@
                             <!-- list contact/chat -->
                             <div class="container-list-contacts overflow-auto">
                                 <ul class="list-unstyled">
-                                    <li @click="" v-for="(contact,index) in contacts" class="selected-gray">
+                                    <li @click="clickedContact(index)" v-for="(contact,index) in contacts" class="selected-gray">
                                         <div class="my-contact-wrapper d-flex justify-content-between">
                                             <div class="my-contact-left d-flex">
                                                 <div class="my-pic-bg me-2">
@@ -113,9 +113,9 @@
                             </div>
 
                             <div class="my-box-chat overflow-auto">
-                                <div  class="my-msg-right-container clearfix">
-                                    <div class="my-msg-right float-end msg-box-style d-flex flex-column">
-                                        ciao
+                                <div v-for="(contact,index) in contacts"  class="my-msg-right-container clearfix">
+                                    <div v-if="contact.isClicked" class="my-msg-right float-end msg-box-style d-flex flex-column">
+                                        {{contact.messages[index].message}}
                                     </div>
                                 </div>
 

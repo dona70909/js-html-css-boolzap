@@ -29,7 +29,8 @@ const app = new Vue ({
                     }
                 ],
 
-                image:"avatar_1.jpg"
+                image:"avatar_1.jpg",
+                isClicked:false,
             },
             {
                 name: 'Fabio',
@@ -53,7 +54,8 @@ const app = new Vue ({
                     }
                 ],
 
-                image:"avatar_2.jpg"
+                image:"avatar_2.jpg",
+                isClicked:false,
             },
             {
                 name: 'Samuele',
@@ -77,7 +79,8 @@ const app = new Vue ({
                     }
                 ],
 
-                image:"avatar_3.jpg"
+                image:"avatar_3.jpg",
+                isClicked:false,
             },
             {
                 name: 'Alessandro B.',
@@ -96,7 +99,8 @@ const app = new Vue ({
                     }
                 ],
 
-                image:"avatar_4.jpg"
+                image:"avatar_4.jpg",
+                isClicked:false,
             },
             {
                 name: 'Alessandro L.',
@@ -115,7 +119,8 @@ const app = new Vue ({
                     }
                 ],
 
-                image:"avatar_5.jpg"
+                image:"avatar_5.jpg",
+                isClicked:false,
             },
             {
                 name: 'Claudia',
@@ -139,7 +144,8 @@ const app = new Vue ({
                     }
                 ],
 
-                image:"avatar_6.jpg"
+                image:"avatar_6.jpg",
+                isClicked:false,
             },
             {
                 name: 'Federico',
@@ -158,7 +164,8 @@ const app = new Vue ({
                     }
                 ],
 
-                image:"avatar_7.jpg"
+                image:"avatar_7.jpg",
+                isClicked:false,
             },
             {
                 name: 'Davide',
@@ -184,7 +191,7 @@ const app = new Vue ({
                 
                 image:"avatar_8.jpg",
 
-                isClicked:false
+                isClicked:false,
             }
         ]
         
@@ -194,7 +201,9 @@ const app = new Vue ({
     methods: {
 
         clickedContact(index){
-            this.isClicked = true;
+            if(this.contacts[index].messages != 0){
+                return this.contacts[index].isClicked = true;
+            }
         }
     },
 })

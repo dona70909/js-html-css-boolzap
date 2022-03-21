@@ -202,8 +202,10 @@ const app = new Vue ({
 
         clickedContact(index){
             if(this.contacts[index].messages != 0){
-                return this.contacts[index].isClicked = true;
+                this.contacts[index].isClicked = true;
             }
+
+            console.table(this.contacts[index].messages[index].message);
         }
     },
 })

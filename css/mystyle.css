@@ -22,7 +22,14 @@ body{
 
 .bi{
     cursor: pointer;
+   
 }
+
+.icon-grey{
+    color: rgb(132, 129, 122);
+}
+
+
 
 /* # left */
 

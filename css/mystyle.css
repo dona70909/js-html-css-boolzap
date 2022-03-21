@@ -1,9 +1,28 @@
 .my-top-background{
     background-color: rgb(0, 150, 136);
-    height: 20vh;
+    height: 15vh;
 }
 
 .my-main-background{
-    height: 80vh;
+    height: 85vh;
     background-color:rgb(214, 219, 214) ;
+}
+
+.my-main-content-wrapper{
+    background-color: red;
+}
+
+.my-main-content-left{
+    background-color: aquamarine;
+}
+
+.my-main-content-right{
+    background-color: bisque;
+}
+
+.my-pic-bg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: blueviolet;
 }

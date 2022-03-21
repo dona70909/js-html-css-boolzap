@@ -97,12 +97,12 @@
                         <div class="col-6 my-main-content-right d-flex flex-column justify-content-between">
 
                             <!-- selcted contact/chat from left-content -->
-                            <div  class="my-contact-wrapper d-flex justify-content-between px-2 py-3 selected-gray">
+                            <div v-if="(index == activeClick)" v-for="(contact,index) in contacts" class="my-contact-wrapper d-flex justify-content-between px-2 py-3 selected-gray">
                                 <div class="my-contact-left d-flex">
                                     <div class="my-pic-bg me-2">
-                                        <img src="#" alt="foto">
+                                        <img :src="'img/' + contact.image" alt="foto">
                                     </div>
-                                    <h5>nome</h5>
+                                    <h5>{{contact.name}}</h5>
                                 </div>
                                 
                                 <div class="my-contact-right">
@@ -127,6 +127,7 @@
                                     </div>
                                 </div>
                             </div>
+                            
 
                             <div v-else="contact.isClicked = false"></div>
 

@@ -203,21 +203,23 @@ const app = new Vue ({
     methods: {
         getActiveClick(index){
             this.activeClick = index;
-            return index;
         },
         
-        getInput(input,index){
-            newMessage = this.createNewMessage();
-            if(input != ""){
-                if(this.getActiveClick(index)){
-                    this.contacts[index].messages.push(newMessage);
-                    console.log(this.contacts[index].messages);
+        getInput(input){
+
+    
+            if(this.getActiveClick(index)){
+                newMessage = this.createNewMessage();
+                this.contacts[index].messages.push(newMessage);
+                console.log(this.contacts[index].messages);
+
+                if(input != ""){
                     newMessage.message = input;
                     this.inputMessage = "";
-                }
-            } else {
-                console.log("empty msg");
-            }   
+                } else {
+                    console.log("empty msg");
+                }  
+            }
         },
 
         createNewMessage(){

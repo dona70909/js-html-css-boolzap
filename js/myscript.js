@@ -216,6 +216,7 @@ const app = new Vue ({
             });
         },
         
+        // ! input without answer
         /*getInput(input){
             if(input != ""){
                 newMessage = this.createNewMessage();

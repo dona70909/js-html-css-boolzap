@@ -215,6 +215,17 @@ const app = new Vue ({
                 }
             });
         },
+
+        removeMessage(){
+            this.contacts.forEach((contact,index) => {
+                if(this.activeClick == index){
+                    this.contacts[this.activeClick].messages.splice(this.activeClick,1);
+                    console.log("active" +  this.contacts[this.activeClick].messages );
+                }else {
+                    console.log("not active, no push");
+                }
+            });
+        },
         
         // ! input without answer
         /*getInput(input){

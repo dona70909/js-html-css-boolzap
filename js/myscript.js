@@ -165,7 +165,6 @@ const app = new Vue ({
                 ],
 
                 image:"avatar_7.jpg",
-               
             },
             {
                 name: 'Davide',
@@ -207,11 +206,32 @@ const app = new Vue ({
         },
         
         getInput(input){
-            
+            // creo un nuovo obj message
+            newMessage = this.createNewMessage();
+            // scorro l'array di contacts solo se l'input è pieno?
             if(input != ""){
-                console.log(input);
-                return this.input;
-            } 
+                // input pieno true allora scorro l'obj dei contacts 
+                // cerco il contact attivo al quale inserisco un nuovo msg
+                // al nuovo obj msg assegno alla prop. message l'input
+                this.contacts.forEach((contact,index) => {
+                    if(this.getActiveClick(index)){
+                        this.contacts[index].messages.push(newMessage);
+                        console.log(this.contacts[index].messages);
+                        newMessage.message = input;
+                        this.inputMessage = "";
+                    }
+                });
+            } else {
+                console.log("empty msg");
+            }   
+        },
+
+        createNewMessage(){
+            return {
+                date:"",
+                message:"",
+                status:""
+            }
         }
     },
 })

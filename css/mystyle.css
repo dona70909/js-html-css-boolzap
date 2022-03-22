@@ -116,6 +116,10 @@ li{
     background-image:url("https://i.pinimg.com/736x/e4/7c/40/e47c40fa64c12a0179320f76ddd67d8d.jpg");
 }
 
+.my-box-chat{
+    height:calc(100% - 70px - 56px) ;
+}
+
 .my-msg-right-container{
     width: 100%;
 }

@@ -94,7 +94,7 @@
                         </div>
                         
                         <!-- # RIGHT CONTENT  -->
-                        <div class="col-6 my-main-content-right d-flex flex-column justify-content-between">
+                        <div class="col-6 my-main-content-right d-flex flex-column">
 
                             <!-- selcted contact/chat from left-content -->
                             <div v-if="(index == activeClick)" v-for="(contact,index) in contacts" class="my-contact-wrapper d-flex justify-content-between px-2 py-3 selected-gray">
@@ -118,8 +118,8 @@
                             <div v-if="(index == activeClick)" v-for="(contact,index) in contacts"  class="my-box-chat overflow-auto">
 
                                 <!-- # msg sent green -->
-                                <div  v-for="(msg,index) in contact.messages" class="my-msg-right-container clearfix mb-1">
-                                    <div v-if="msg.status == 'sent' " class="my-msg-right float-end msg-box-style d-flex flex-column">
+                                <div v-for="(msg,index) in contact.messages" class="my-msg-right-container clearfix mb-1">
+                                    <div v-if="msg.status == 'sent'" class="my-msg-right float-end msg-box-style d-flex flex-column">
                                         {{msg.message}}
                                     </div>
                                 </div>
@@ -136,16 +136,15 @@
                                     <div v-if="(inputMessage != '')" class="my-msg-right float-end msg-box-style d-flex flex-column">
                                         {{inputMessage}}
                                     </div>
-                                    
                                 </div>
 
                             </div>
 
                             <!-- nessun element active -->
-                            <div v-else></div>
-
+                            <!-- <div v-else></div> 
+ -->
                             <!-- # search bar -->
-                            <div class="my-bottom-input-container d-flex justify-content-between">
+                            <div class="my-bottom-input-container d-flex justify-content-between flex-end">
                                 <i class="bi bi-emoji-smile px-2 icon-grey"></i>
                                 <input v-model="inputMessage" type="text" placeholder="Write message" class="my-input px-4">
                                 <i class="bi bi-mic-fill px-2 icon-grey"></i>

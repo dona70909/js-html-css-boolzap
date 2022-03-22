@@ -97,7 +97,7 @@
                         <div class="col-6 my-main-content-right d-flex flex-column justify-content-between">
                             
                             <!-- % selcted contact/chat from left-content -->
-                            <div v-if="(index == activeClick)" v-for="(contact,index) in contacts" class="my-contact-wrapper d-flex justify-content-between px-2 py-3 selected-gray">
+                            <div v-if="(index == activeClick)"  v-for="(contact,index) in  checkSearchContact" class="my-contact-wrapper d-flex justify-content-between px-2 py-3 selected-gray">
                                 <div class="my-contact-left d-flex">
                                     <div class="my-pic-bg me-2">
                                         <img :src="'img/' + contact.image" alt="foto">
@@ -116,7 +116,7 @@
                             <div v-else></div>
                             
                             <!-- %BOX MESSAGES -->
-                            <div v-if="(index == activeClick)" v-for="(contact,index) in contacts"  class="my-box-chat overflow-auto">    
+                            <div v-if="(index == activeClick)"  v-for="(contact,index) in  checkSearchContact"  class="my-box-chat overflow-auto">    
                                 <div v-for="(msg,index) in contact.messages" class="my-msg-right-container clearfix mb-1">
                                     <div v-if="msg.status == 'sent' || msg.status == 'received' " :class="(msg.status == 'sent')? 'float-end my-msg-right' : 'float-start my-answer-msg-left' " class=" msg-box-style d-flex flex-column">
                                         {{msg.message}}

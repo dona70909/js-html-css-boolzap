@@ -260,8 +260,6 @@ const app = new Vue ({
         timeFn(){
             this.pushMessage(newAnswer);
         },
-
-        
     },
 
     computed: {

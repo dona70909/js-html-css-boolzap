@@ -195,6 +195,8 @@ const app = new Vue ({
 
         activeClick:null,
         inputMessage:"",
+
+        messageNew:"",
         isPressed:false,
         
     
@@ -205,9 +207,7 @@ const app = new Vue ({
             this.activeClick = index;
         },
         
-        getInput(input){
-
-    
+        /* getInput(input){
             if(this.getActiveClick(index)){
                 newMessage = this.createNewMessage();
                 this.contacts[index].messages.push(newMessage);
@@ -220,6 +220,16 @@ const app = new Vue ({
                     console.log("empty msg");
                 }  
             }
+        }, */
+
+        getInput(input){
+            if(input != ""){
+                this.messageNew = input;
+                /* this.inputMessage = "" */;
+            } else {
+                console.log("empty string");
+            }
+
         },
 
         createNewMessage(){

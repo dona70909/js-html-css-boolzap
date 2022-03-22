@@ -197,19 +197,19 @@ const app = new Vue ({
         inputMessage:"",
         inputContact:"",
         activeMessage:null,
-
+        
     },
     
-
+    
     methods: {
         getActiveClick(index){
             this.activeClick = index;
         },
-
+        
         getActiveMessage(index){
             this.activeMessage = index;
         },
-
+        
         pushMessage(pushElement){
             this.contacts.forEach((contact,index) => {
                 if(this.activeClick == index){
@@ -220,7 +220,7 @@ const app = new Vue ({
                 }
             });
         },
-
+        
         removeMessage(indexMsg){
             this.contacts.forEach((contact,index) => {
                 if((this.activeClick == index) && (this.activeMessage == indexMsg)){
@@ -264,7 +264,7 @@ const app = new Vue ({
                 status:"sent"
             }
         },
-
+        
         createNewAnswer(){
             return {
                 date:"",
@@ -272,12 +272,12 @@ const app = new Vue ({
                 status:"received"
             }
         },
-
+        
         timeFn(){
             this.pushMessage(newAnswer);
         },
     },
-
+    
     computed: {
         checkSearchContact(){
             return this.contacts.filter(contact => {

@@ -116,6 +116,7 @@ li{
     background-image:url("https://i.pinimg.com/736x/e4/7c/40/e47c40fa64c12a0179320f76ddd67d8d.jpg");
 }
 
+/* ! chat */
 .my-box-chat{
     height:calc(100% - 70px - 56px) ;
 }
@@ -124,16 +125,8 @@ li{
     width: 100%;
 }
 
-.my-msg-right{
-    background-color: rgb(213, 249, 186);
-}
-
 .my-answer-msg-left-container{
     width: 100%;
-}
-
-.my-answer-msg-left{
-    background-color: rgb(255, 255, 255);
 }
 
 .msg-box-style{
@@ -142,6 +135,21 @@ li{
     border-radius: 10px;
 }
 
+.my-msg-right{
+    background-color: rgb(213, 249, 186);
+}
+
+.my-answer-msg-left{
+    background-color: rgb(255, 255, 255);
+}
+
+.my-time {
+    font-size: .6rem;
+    color: rgb(131, 130, 130);
+}
+
+
+/* ! input msg container */
 .my-bottom-input-container{
     background-color:rgb(243, 238, 234);
     padding: .5rem 1.8rem;

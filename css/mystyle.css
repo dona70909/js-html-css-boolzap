@@ -155,3 +155,8 @@ li{
 .bi-emoji-smile,.bi-mic-fill{
     line-height: 40px;
 }
+
+.my-dropdown-icon{
+    color: rgb(158, 162, 165);
+    cursor: pointer;
+}

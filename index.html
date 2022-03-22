@@ -94,7 +94,7 @@
                         </div>
                         
                         <!-- # RIGHT CONTENT  -->
-                        <div class="col-6 my-main-content-right d-flex flex-column">
+                        <div class="col-6 my-main-content-right d-flex flex-column justify-content-between">
 
                             <!-- selcted contact/chat from left-content -->
                             <div v-if="(index == activeClick)" v-for="(contact,index) in contacts" class="my-contact-wrapper d-flex justify-content-between px-2 py-3 selected-gray">
@@ -112,7 +112,8 @@
                                 </div>
                             </div>
 
-
+                            <!-- contanitore vuoto(modificare) solo se nessuna chat è selezionata -->
+                            <div v-else></div>
                             
                             <!-- BOX MESSAGES -->
                             <div v-if="(index == activeClick)" v-for="(contact,index) in contacts"  class="my-box-chat overflow-auto">
@@ -144,7 +145,7 @@
                             <!-- <div v-else></div> -->
 
                             <!-- # search bar -->
-                            <div  class="my-bottom-input-container d-flex justify-content-between ">
+                            <div  class="my-bottom-input-container d-flex justify-content-between">
                                 <i class="bi bi-emoji-smile px-2 icon-grey"></i>
                                 <input v-model="inputMessage" type="text" placeholder="Write message" class="my-input px-4">
                                 <i class="bi bi-mic-fill px-2 icon-grey"></i>

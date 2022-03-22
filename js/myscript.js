@@ -225,7 +225,7 @@ const app = new Vue ({
         getInput(input){
             if(input != ""){
                 this.messageNew = input;
-                /* this.inputMessage = "" */;
+                this.inputMessage = "" ;
             } else {
                 console.log("empty string");
             }

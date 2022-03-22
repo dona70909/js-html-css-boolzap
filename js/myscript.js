@@ -30,7 +30,7 @@ const app = new Vue ({
                 ],
 
                 image:"avatar_1.jpg",
-                isClicked:false,
+                
             },
             {
                 name: 'Fabio',
@@ -55,7 +55,7 @@ const app = new Vue ({
                 ],
 
                 image:"avatar_2.jpg",
-                isClicked:false,
+                
             },
             {
                 name: 'Samuele',
@@ -80,7 +80,7 @@ const app = new Vue ({
                 ],
 
                 image:"avatar_3.jpg",
-                isClicked:false,
+                
             },
             {
                 name: 'Alessandro B.',
@@ -100,7 +100,7 @@ const app = new Vue ({
                 ],
 
                 image:"avatar_4.jpg",
-                isClicked:false,
+                
             },
             {
                 name: 'Alessandro L.',
@@ -120,7 +120,7 @@ const app = new Vue ({
                 ],
 
                 image:"avatar_5.jpg",
-                isClicked:false,
+                
             },
             {
                 name: 'Claudia',
@@ -145,7 +145,7 @@ const app = new Vue ({
                 ],
 
                 image:"avatar_6.jpg",
-                isClicked:false,
+                
             },
             {
                 name: 'Federico',
@@ -165,7 +165,7 @@ const app = new Vue ({
                 ],
 
                 image:"avatar_7.jpg",
-                isClicked:false,
+               
             },
             {
                 name: 'Davide',
@@ -191,7 +191,6 @@ const app = new Vue ({
                 
                 image:"avatar_8.jpg",
 
-                isClicked:false,
             }
         ],
 
@@ -207,5 +206,12 @@ const app = new Vue ({
             this.activeClick = index;
         },
         
+        getInput(input){
+            
+            if(input != ""){
+                console.log(input);
+                return this.input;
+            } 
+        }
     },
 })

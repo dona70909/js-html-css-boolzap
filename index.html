@@ -23,7 +23,7 @@
 <body>
     <main id="app">
 
-        <section class="position-relative">
+        <section class="position-relative"  @keyup.enter="getInput(inputMessage)">
 
             <!-- & top green bg -->
             <section class="my-top-background">
@@ -133,7 +133,7 @@
                                 </div>
 
                                 <!-- # input msg msg sent green--> 
-                                <div  class="my-msg-right-container clearfix mb-1">
+                                <div class="my-msg-right-container clearfix mb-1">
                                     <div v-if="(inputMessage != '')" class="my-msg-right float-end msg-box-style d-flex flex-column">
                                         {{inputMessage}}
                                     </div>

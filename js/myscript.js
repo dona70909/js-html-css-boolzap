@@ -259,7 +259,7 @@ const app = new Vue ({
         
         createNewMessage(){
             return {
-                date:"",
+                date:'10/01/2020 15:51:00',
                 message:"",
                 status:"sent"
             }
@@ -267,7 +267,7 @@ const app = new Vue ({
         
         createNewAnswer(){
             return {
-                date:"",
+                date:'10/01/2020 15:51:00',
                 message:"ok",
                 status:"received"
             }
@@ -276,6 +276,7 @@ const app = new Vue ({
         timeFn(){
             this.pushMessage(newAnswer);
         },
+
     },
     
     computed: {

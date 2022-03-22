@@ -197,9 +197,7 @@ const app = new Vue ({
         inputMessage:"",
         
         messageNew:"",
-        isPressed:false,
-        
-        
+        isPressed:false,        
     }, 
     
     methods: {
@@ -218,7 +216,7 @@ const app = new Vue ({
             });
         },
         
-        getInput(input){
+        /*getInput(input){
             if(input != ""){
                 newMessage = this.createNewMessage();
                 this.pushMessage(newMessage);
@@ -227,17 +225,20 @@ const app = new Vue ({
             } else {
                 console.log("empty msg");
             }
-        },
+        },*/
         
-        /*getInput(input){
+        getInput(input){
             if(input != ""){
-                this.messageNew = input;
-                this.inputMessage = "" ;
+                newMessage = this.createNewMessage();
+                newAnswer = this.createNewAnswer();
+                this.pushMessage(newMessage);
+                setTimeout(this.timeFn,3000);
+                newMessage.message = input;
+                this.inputMessage = "";
             } else {
-                console.log("empty string");
+                console.log("empty msg");
             }
-            
-        }, */
+        },
         
         createNewMessage(){
             return {
@@ -245,6 +246,18 @@ const app = new Vue ({
                 message:"",
                 status:"sent"
             }
+        },
+
+        createNewAnswer(){
+            return {
+                date:"",
+                message:"ok",
+                status:"received"
+            }
+        },
+
+        timeFn(){
+            this.pushMessage(newAnswer);
         }
     },
 })

@@ -117,24 +117,23 @@
                             <!-- BOX MESSAGES -->
                             <div v-if="(index == activeClick)" v-for="(contact,index) in contacts"  class="my-box-chat overflow-auto">
 
-                                <!-- # msg sent -->
+                                <!-- # msg sent green -->
                                 <div  v-for="(msg,index) in contact.messages" class="my-msg-right-container clearfix mb-1">
                                     <div v-if="msg.status == 'sent' " class="my-msg-right float-end msg-box-style d-flex flex-column">
                                         {{msg.message}}
                                     </div>
                                 </div>
 
-                                <!-- % received messages -->
+                                <!-- % received messages white -->
                                 <div v-for="(msg,index) in contact.messages"  class="my-answer-msg-left-container ">
                                     <div v-if="msg.status == 'received' " class="my-answer-msg-left msg-box-style mb-1">
                                         {{msg.message}}
                                     </div>
-                                    
                                 </div>
 
-                                <!-- # input msg --> 
-                                <div class="my-answer-msg-left-container ">
-                                    <div v-if="(inputMessage != '')" class="my-answer-msg-left msg-box-style">
+                                <!-- # input msg msg sent green--> 
+                                <div  class="my-msg-right-container clearfix mb-1">
+                                    <div v-if="(inputMessage != '')" class="my-msg-right float-end msg-box-style d-flex flex-column">
                                         {{inputMessage}}
                                     </div>
                                     

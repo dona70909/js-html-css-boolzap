@@ -106,8 +106,18 @@ li{
     background-color:rgb(234, 234, 234);
 }
 
-.my-box-chat{
-    padding: 1rem;
+.my-last-msg{
+    font-size: .8rem;
+}
+
+.my-alert{
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.my-alert-active-msg{
+    font-size: .6rem;
+    font-weight: 400;
 }
 
 /* # RIGHT */
@@ -116,9 +126,11 @@ li{
     background-image:url("https://i.pinimg.com/736x/e4/7c/40/e47c40fa64c12a0179320f76ddd67d8d.jpg");
 }
 
+
 /* ! chat */
 .my-box-chat{
-    height:calc(100% - 70px - 56px) ;
+    height:calc(100% - 70px - 56px);
+    padding: 1rem;
 }
 
 .my-msg-right-container{

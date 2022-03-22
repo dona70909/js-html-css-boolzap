@@ -63,12 +63,12 @@
                             
                             <!--% ALERT OPTIONS -->
                             <div class="my-message-alert-wrapper selected d-flex">
-                                <div class="bell-icon-bg me-1">
+                                <div class="bell-icon-bg me-2">
                                     <i class="bi bi-bell-slash-fill"></i>
                                 </div>
                                 <div class="text-alert-wrap">
-                                    <p class="m-0">Ricevi notifiche di nuovi messaggi</p>
-                                    <p class="m-0"><a href="#/">Attiva notifiche</a></p>
+                                    <p class="m-0 my-alert">Ricevi notifiche di nuovi messaggi</p>
+                                    <p class="m-0 my-alert-active-msg"><a href="#/">Attiva notifiche</a></p>
                                 </div>
                             </div>
                             
@@ -89,7 +89,7 @@
                                                 </div>
                                                 <div class="my-contact-text">
                                                     <h6 class="fw-bolder m-0">{{contact.name}}</h6>
-                                                    <p class="m-0">Ultimo messaggio inviato</p>
+                                                    <p class="m-0 my-last-msg">Ultimo messaggio inviato</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -113,7 +113,7 @@
                                 <div class="my-contact-right">
                                     <i class="bi bi-search fs-4 icon-grey"></i>
                                     <i class="bi bi-paperclip fs-4 icon-grey"></i>
-                                    <i class="bi bi-three-dots fs-4 icon-grey"></i>
+                                    <i class="bi bi-three-dots-vertical fs-4 icon-grey"></i>
                                 </div>
                             </div>
                             
@@ -127,7 +127,6 @@
                                         
                                         <div class="d-flex flex-column">
                                             <p class="m-0">{{msg.message}}</p>
-                                            
                                         </div>
                                         
                                         <div class="dropdown">

@@ -40,7 +40,7 @@
                         
                         <!-- # left content -->
                         <div class="col-4 d-flex flex-column my-main-content-left ">
-                            <!-- FIRST CONTACT -->
+                            <!-- %FIRST CONTACT -->
                             <div class="my-contact-wrapper my-selected-contact-wrapper selected-gray d-flex justify-content-between px-2 py-3">
                                 <div class="my-contact-left d-flex">
                                     <div class="my-pic-bg me-2">
@@ -56,7 +56,7 @@
                                 </div>
                             </div>
                             
-                            <!-- ALERT OPTIONS -->
+                            <!--% ALERT OPTIONS -->
                             <div class="my-message-alert-wrapper selected d-flex">
                                 <div class="bell-icon-bg me-1">
                                     <i class="bi bi-bell-slash-fill"></i>
@@ -67,13 +67,13 @@
                                 </div>
                             </div>
                             
-                            <!-- SEARCH  -->
+                            <!--% SEARCH  -->
                             <div class="my-search-box-wrapper d-flex">
                                 <i class="bi bi-search icon-grey"></i>
                                 <input type="search" placeholder="Search" class="my-search-bar">
                             </div>
                             
-                            <!-- list contact/chat -->
+                            <!--% list contact/chat -->
                             <div class="container-list-contacts overflow-auto">
                                 <ul class="list-unstyled">
                                     <li @click=" getActiveClick(index)"  :class="(index == activeClick)? 'selected-gray' : ' ' "  v-for="(contact,index) in contacts">
@@ -96,7 +96,7 @@
                         <!-- # RIGHT CONTENT  -->
                         <div class="col-6 my-main-content-right d-flex flex-column justify-content-between">
                             
-                            <!-- selcted contact/chat from left-content -->
+                            <!-- % selcted contact/chat from left-content -->
                             <div v-if="(index == activeClick)" v-for="(contact,index) in contacts" class="my-contact-wrapper d-flex justify-content-between px-2 py-3 selected-gray">
                                 <div class="my-contact-left d-flex">
                                     <div class="my-pic-bg me-2">
@@ -115,20 +115,16 @@
                             <!-- !contanitore vuoto(modificare) solo se nessuna chat è selezionata -->
                             <div v-else></div>
                             
-                            <!-- BOX MESSAGES -->
-                            <div v-if="(index == activeClick)" v-for="(contact,index) in contacts"  class="my-box-chat overflow-auto">
-                                
-                                <!-- # msg sent green -->
+                            <!-- %BOX MESSAGES -->
+                            <div v-if="(index == activeClick)" v-for="(contact,index) in contacts"  class="my-box-chat overflow-auto">    
                                 <div v-for="(msg,index) in contact.messages" class="my-msg-right-container clearfix mb-1">
                                     <div v-if="msg.status == 'sent' || msg.status == 'received' " :class="(msg.status == 'sent')? 'float-end my-msg-right' : 'float-start my-answer-msg-left' " class=" msg-box-style d-flex flex-column">
                                         {{msg.message}}
                                     </div>
                                 </div>
-                                
-                                
                             </div>
                             
-                            <!-- # search bar -->
+                            <!-- % search bar -->
                             <div v-if="(index == activeClick)" v-for="(contact,index) in contacts" class="my-bottom-input-container d-flex justify-content-between">
                                 <i class="bi bi-emoji-smile px-2 icon-grey"></i>
                                 <input v-model="inputMessage" type="text" placeholder="Write message" class="my-input px-4">

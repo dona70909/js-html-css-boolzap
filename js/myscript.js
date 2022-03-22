@@ -195,11 +195,11 @@ const app = new Vue ({
         
         activeClick:null,
         inputMessage:"",
-        
-        messageNew:"",
-        isPressed:false,        
-    }, 
+        inputContact:"",
+
+    },
     
+ 
     methods: {
         getActiveClick(index){
             this.activeClick = index;
@@ -259,6 +259,16 @@ const app = new Vue ({
 
         timeFn(){
             this.pushMessage(newAnswer);
+        },
+
+        
+    },
+
+    computed: {
+        checkSearchContact(){
+            return this.contacts.filter(contact => {
+                return contact.name.toLowerCase().includes(this.inputContact.toLowerCase());
+            });
         }
     },
 })

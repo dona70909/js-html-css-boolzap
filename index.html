@@ -70,13 +70,13 @@
                             <!--% SEARCH  -->
                             <div class="my-search-box-wrapper d-flex">
                                 <i class="bi bi-search icon-grey"></i>
-                                <input type="search" placeholder="Search" class="my-search-bar">
+                                <input v-model="inputContact" type="search" placeholder="Search" class="my-search-bar">
                             </div>
                             
                             <!--% list contact/chat -->
                             <div class="container-list-contacts overflow-auto">
                                 <ul class="list-unstyled">
-                                    <li @click=" getActiveClick(index)"  :class="(index == activeClick)? 'selected-gray' : ' ' "  v-for="(contact,index) in contacts">
+                                    <li @click="getActiveClick(index)" :class="(index == activeClick)? 'selected-gray' : ' ' "  v-for="(contact,index) in  checkSearchContact">
                                         <div class="my-contact-wrapper d-flex justify-content-between">
                                             <div class="my-contact-left d-flex">
                                                 <div class="my-pic-bg me-2">

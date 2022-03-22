@@ -203,24 +203,18 @@ const app = new Vue ({
     methods: {
         getActiveClick(index){
             this.activeClick = index;
+            return index;
         },
         
-        getInput(input){
-            // creo un nuovo obj message
+        getInput(input,index){
             newMessage = this.createNewMessage();
-            // scorro l'array di contacts solo se l'input è pieno?
             if(input != ""){
-                // input pieno true allora scorro l'obj dei contacts 
-                // cerco il contact attivo al quale inserisco un nuovo msg
-                // al nuovo obj msg assegno alla prop. message l'input
-                this.contacts.forEach((contact,index) => {
-                    if(this.getActiveClick(index)){
-                        this.contacts[index].messages.push(newMessage);
-                        console.log(this.contacts[index].messages);
-                        newMessage.message = input;
-                        this.inputMessage = "";
-                    }
-                });
+                if(this.getActiveClick(index)){
+                    this.contacts[index].messages.push(newMessage);
+                    console.log(this.contacts[index].messages);
+                    newMessage.message = input;
+                    this.inputMessage = "";
+                }
             } else {
                 console.log("empty msg");
             }   

@@ -122,8 +122,8 @@
                             
                             <!-- %BOX MESSAGES -->
                             <div v-if="(index == activeClick)"  v-for="(contact,index) in  checkSearchContact"  class="my-box-chat overflow-auto">    
-                                <div v-for="(msg,index) in contact.messages" class="my-msg-right-container clearfix mb-1">
-                                    <div v-if="msg.status == 'sent' || msg.status == 'received' " :class="(msg.status == 'sent')? 'float-end my-msg-right' : 'float-start my-answer-msg-left' " class=" msg-box-style d-flex justify-content-between">
+                                <div v-for="(msg,indexMsg) in contact.messages" class="my-msg-right-container clearfix mb-1">
+                                    <div @click="getActiveMessage(indexMsg)" v-if="msg.status == 'sent' || msg.status == 'received' " :class="(msg.status == 'sent')? 'float-end my-msg-right' : 'float-start my-answer-msg-left' " class=" msg-box-style d-flex justify-content-between">
                                         
                                         <p class="m-0">{{msg.message}}</p>
                                         
@@ -131,7 +131,7 @@
                                             <i class="fs-5 my-dropdown-icon dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
                                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                 <a class="dropdown-item" href="#">Message info</a>
-                                                <a  class="dropdown-item" @click="removeMessage(index)" href="#">Delete message</a>
+                                                <a v-if="activeMessage == indexMsg" class="dropdown-item" @click="removeMessage(indexMsg)" href="#">Delete message</a>
                                             </div>
                                         </div>
                                         

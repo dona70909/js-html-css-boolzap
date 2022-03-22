@@ -196,6 +196,7 @@ const app = new Vue ({
         activeClick:null,
         inputMessage:"",
         inputContact:"",
+        activeMessage:null,
 
     },
     
@@ -203,6 +204,10 @@ const app = new Vue ({
     methods: {
         getActiveClick(index){
             this.activeClick = index;
+        },
+
+        getActiveMessage(index){
+            this.activeMessage = index;
         },
 
         pushMessage(pushElement){
@@ -216,10 +221,10 @@ const app = new Vue ({
             });
         },
 
-        removeMessage(index){
+        removeMessage(indexMsg){
             this.contacts.forEach((contact,index) => {
-                if(this.activeClick == index){
-                    this.contacts[this.activeClick].messages.splice(this.activeClick,1);
+                if((this.activeClick == index) && (this.activeMessage == indexMsg)){
+                    this.contacts[this.activeClick].messages.splice(this.activeMessage,1);
                     console.log("active" + " " + this.activeClick + " " + index);
                 }else {
                     console.log("not active, no remove");

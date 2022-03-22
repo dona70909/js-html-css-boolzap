@@ -1,11 +1,11 @@
 
 
 const app = new Vue ({
-
+    
     el:"#app",
-
+    
     data:{
-
+        
         contacts: [
             {
                 name: 'Michele',
@@ -28,7 +28,7 @@ const app = new Vue ({
                         status: 'received'
                     }
                 ],
-
+                
                 image:"avatar_1.jpg",
                 
             },
@@ -53,7 +53,7 @@ const app = new Vue ({
                         status: 'sent'
                     }
                 ],
-
+                
                 image:"avatar_2.jpg",
                 
             },
@@ -78,7 +78,7 @@ const app = new Vue ({
                         status: 'received'
                     }
                 ],
-
+                
                 image:"avatar_3.jpg",
                 
             },
@@ -98,7 +98,7 @@ const app = new Vue ({
                         status: 'received'
                     }
                 ],
-
+                
                 image:"avatar_4.jpg",
                 
             },
@@ -118,7 +118,7 @@ const app = new Vue ({
                         status: 'received'
                     }
                 ],
-
+                
                 image:"avatar_5.jpg",
                 
             },
@@ -143,7 +143,7 @@ const app = new Vue ({
                         status: 'sent'
                     }
                 ],
-
+                
                 image:"avatar_6.jpg",
                 
             },
@@ -163,7 +163,7 @@ const app = new Vue ({
                         status: 'received'
                     }
                 ],
-
+                
                 image:"avatar_7.jpg",
             },
             {
@@ -189,54 +189,61 @@ const app = new Vue ({
                 ],
                 
                 image:"avatar_8.jpg",
-
+                
             }
         ],
-
+        
         activeClick:null,
         inputMessage:"",
-
+        
         messageNew:"",
         isPressed:false,
         
-    
+        
     }, 
-
+    
     methods: {
         getActiveClick(index){
             this.activeClick = index;
         },
+
+        pushMessage(pushElement){
+            this.contacts.forEach((contact,index) => {
+                if(this.activeClick == index){
+                    this.contacts[this.activeClick].messages.push(pushElement);
+                    console.log("active" +  this.contacts[this.activeClick].messages );
+                }else {
+                    console.log("not active, no push");
+                }
+            });
+        },
         
-        /* getInput(input){
-            if(this.getActiveClick(index)){
-                newMessage = this.createNewMessage();
-                this.contacts[index].messages.push(newMessage);
-                console.log(this.contacts[index].messages);
-
-                if(input != ""){
-                    newMessage.message = input;
-                    this.inputMessage = "";
-                } else {
-                    console.log("empty msg");
-                }  
-            }
-        }, */
-
         getInput(input){
+            if(input != ""){
+                newMessage = this.createNewMessage();
+                this.pushMessage(newMessage);
+                newMessage.message = input;
+                this.inputMessage = "";
+            } else {
+                console.log("empty msg");
+            }
+        },
+        
+        /*getInput(input){
             if(input != ""){
                 this.messageNew = input;
                 this.inputMessage = "" ;
             } else {
                 console.log("empty string");
             }
-
-        },
-
+            
+        }, */
+        
         createNewMessage(){
             return {
                 date:"",
                 message:"",
-                status:""
+                status:"sent"
             }
         }
     },

@@ -123,13 +123,12 @@
                             <div v-else></div>
                             
                             <!-- %BOX MESSAGES -->
-                            <div class="my-box-chat overflow-auto">    
-                                <div v-for="(msg,indexMsg) in checkSearchContact[activeClick].messages" class="my-msg-right-container clearfix mb-1">
+                            <div class="my-box-chat overflow-y">    
+                                <div v-for="(msg,indexMsg) in checkSearchContact[activeClick].messages" class="my-container-message clearfix mb-1">
                                     <div @click="getActiveMessage(indexMsg)" v-if="msg.status == 'sent' || msg.status == 'received' " :class="(msg.status == 'sent')? 'float-end my-msg-right' : 'float-start my-answer-msg-left' " class=" msg-box-style d-flex justify-content-between">
                                         
-                                        <div class="d-flex flex-column">
-                                            <p class="m-0">{{msg.message}}</p>
-                                            <p class="m-0 my-time align-self-end">{{msg.date}}</p>
+                                        <div class="d-flex flex-column my-message-text">
+                                            <p class="m-0 ">{{msg.message}}</p>
                                         </div>
                                         
                                         <div class="dropdown">
@@ -139,7 +138,6 @@
                                                 <a v-if="activeMessage == indexMsg" class="dropdown-item" @click="removeMessage(indexMsg)" href="#">Delete message</a>
                                             </div>
                                         </div>
-                                      
                                     </div>
                                 </div>
                             </div>

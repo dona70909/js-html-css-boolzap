@@ -128,23 +128,23 @@ li{
 
 
 /* ! chat */
+/* middle container chat*/
 .my-box-chat{
     height:calc(100% - 70px - 56px);
     padding: 1rem;
 }
 
-.my-msg-right-container{
+/* single container message */
+.my-container-message{
     width: 100%;
 }
 
-.my-answer-msg-left-container{
-    width: 100%;
-}
-
+/* single message */
 .msg-box-style{
     width: 40%;
     padding: .5rem;
     border-radius: 10px;
+    word-wrap: break-word;
 }
 
 .my-msg-right{
@@ -158,6 +158,10 @@ li{
 .my-time {
     font-size: .6rem;
     color: rgb(131, 130, 130);
+}
+
+p{
+    word-break: break-all;
 }
 
 

@@ -123,8 +123,8 @@
                             <div v-else></div>
                             
                             <!-- %BOX MESSAGES -->
-                            <div v-if="(index == activeClick)"  v-for="(contact,index) in  checkSearchContact"  class="my-box-chat overflow-auto">    
-                                <div v-for="(msg,indexMsg) in contact.messages" class="my-msg-right-container clearfix mb-1">
+                            <div  class="my-box-chat overflow-auto">    
+                                <div v-for="(msg,indexMsg) in checkSearchContact[activeClick].messages" class="my-msg-right-container clearfix mb-1">
                                     <div @click="getActiveMessage(indexMsg)" v-if="msg.status == 'sent' || msg.status == 'received' " :class="(msg.status == 'sent')? 'float-end my-msg-right' : 'float-start my-answer-msg-left' " class=" msg-box-style d-flex justify-content-between">
                                         
                                         <div class="d-flex flex-column">

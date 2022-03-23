@@ -193,7 +193,7 @@ const app = new Vue ({
             }
         ],
         
-        activeClick:null,
+        activeClick:0,
         inputMessage:"",
         inputContact:"",
         activeMessage:null,

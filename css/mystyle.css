@@ -160,7 +160,7 @@ li{
     color: rgb(131, 130, 130);
 }
 
-p{
+.my-message-text p{
     word-break: break-all;
 }
 

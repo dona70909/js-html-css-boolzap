@@ -193,7 +193,7 @@ const app = new Vue ({
             }
         ],
         
-        activeClick:0,
+        activeClick:null,
         inputMessage:"",
         inputContact:"",
         activeMessage:null,
@@ -285,6 +285,7 @@ const app = new Vue ({
     
     computed: {
         checkSearchContact(){
+            this.activeClick = 0; 
             return this.contacts.filter(contact => {
                 return contact.name.toLowerCase().includes(this.inputContact.toLowerCase());
             });

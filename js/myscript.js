@@ -271,7 +271,7 @@ const app = new Vue ({
         createNewAnswer(){
             const today = new Date();
             return {
-                date:today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate() + ' ' +
+                date:today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear() + ' ' +
                 today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(),
                 message:"ok",
                 status:"received"

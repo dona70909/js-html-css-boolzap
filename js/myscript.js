@@ -285,7 +285,7 @@ const app = new Vue ({
     
     computed: {
         checkSearchContact(){
-            this.activeClick = 0; 
+            this.activeClick = 0;
             return this.contacts.filter(contact => {
                 return contact.name.toLowerCase().includes(this.inputContact.toLowerCase());
             });

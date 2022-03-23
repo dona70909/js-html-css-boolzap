@@ -260,7 +260,9 @@ const app = new Vue ({
         createNewMessage(){
             const today = new Date();
             return {
-                date:today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(),
+                /* 10/01/2020 15:50:00 */
+                date:today.getDate()+'/'+(today.getMonth()+1)+'/'+ today.getFullYear() +
+                today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(),
                 message:"",
                 status:"sent"
             }
@@ -269,7 +271,8 @@ const app = new Vue ({
         createNewAnswer(){
             const today = new Date();
             return {
-                date:today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(),
+                date:today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate() + ' ' +
+                today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(),
                 message:"ok",
                 status:"received"
             }

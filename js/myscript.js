@@ -258,16 +258,18 @@ const app = new Vue ({
         },
         
         createNewMessage(){
+            const today = new Date();
             return {
-                date:'10/01/2020 15:51:00',
+                date:today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(),
                 message:"",
                 status:"sent"
             }
         },
         
         createNewAnswer(){
+            const today = new Date();
             return {
-                date:'10/01/2020 15:51:00',
+                date:today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(),
                 message:"ok",
                 status:"received"
             }
